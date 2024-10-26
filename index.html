@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="Weather " name="description">
+    <title>Document</title>
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/all.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet" id="style">
+</head>
+
+<body>
+    
+    <main>
+        <div class="loading ">
+            <div class="loader"></div>
+        </div>
+        <section class="d-flex  w-100">
+
+            <aside
+                class="vh-100 z-1 position-relative d-flex justify-content-between position-fixed align-items-center flex-column">
+                <div class="nav-tab position-relative  d-flex flex-column justify-content-between min-vh-100 p-4">
+                    <div class="links">
+                        <ul class="list-unstyled overflow-hidden">
+                            <li class="py-2 position-relative cursor-pointer" style="top: 0px;" href="#search">Search
+                            </li>
+                            <li class="py-2 position-relative cursor-pointer" style="top: 0px;" href="#catogary">
+                                Categories</li>
+                            <li class="py-2 position-relative cursor-pointer" style="top: 0px;" href="#area">Area</li>
+                            <li class="py-2 position-relative cursor-pointer" style="top: 0px;" href="#ingrediant">
+                                Ingredients</li>
+                            <li class="py-2 position-relative cursor-pointer" style="top: 0px;" href="#contact_us">
+                                Contact Us</li>
+                        </ul>
+                    </div>
+                    <div class="nav-footer">
+                        <div class="icons">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <div class="footer">
+                            <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div
+                    class="navbar position-absolute  h-100 d-flex justify-content-between  align-items-center flex-column">
+                    <img src="img/images1 (7).png" class="w-75 " alt="">
+                    <span class="open"><i class="fa-solid open-close-icon fa-2x fa-align-justify"></i></span>
+                    <div class="text-dark">
+                        <i class="fa-solid fa-globe d-block"></i>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                </div>
+            </aside>
+            <div class="container   home " id="home">
+                <div class="row mt-3 g-1 p-4">
+                </div>
+            </div>
+            <div class="container d-none  order " id="order">
+                <div class="row mt-3 g-1">
+                </div>
+            </div>
+            <div class="container d-none text-white mt-4 d-flex flex-row justify-content-between gap-3 details "
+                id="details">
+                <div class="row h-100 d-flex">
+                </div>
+            </div>
+
+            <div class="container d-none  catogary " id="catogary">
+                <div class="row mt-3 g-1">
+                </div>
+            </div>
+            <div class="container d-none  area " id="area">
+                <div class="row mt-3 g-1">
+                </div>
+            </div>
+            <div class="container d-none   ingrediant " id="ingrediant">
+                <div class="row mt-3 g-1">
+
+                </div>
+            </div>
+            <div class="search   d-none  h-100 container mt-5" id="search">
+                <div class="input mt-2 d-flex justify-content-between gap-3 align-items-center">
+                    <input class="text-white form-control bg-transparent search_name" type="search"
+                        placeholder="search by name">
+                    <input class="text-white form-control bg-transparent search_letter" type="search"
+                        placeholder="search by first letter">
+                </div>
+                <div class="row search_row mt-3 g-1">
+
+                </div>
+            </div>
+            <div class="contact_us d-none flex-column flex-wrap d-flex justify-content-center align-items-center container   mt-5"
+                id="contact_us">
+                <div class="inputd-flex w-100 flex-nowrap   justify-content-between  align-items-center">
+                    <div
+                        class="input_orignal w-100  m-2 d-flex flex-row  justify-content-center gap-2 align-items-center">
+                        <div class="input_two flex-wrap w-50  d-flex  justify-content-between gap-2 align-items-center">
+                            <input oninput="validation(nameRegex,inputName)" id="inputName" class=" form-control w-100"
+                                type="search" placeholder="search by name">
+                            <div id="phoneAlert" class="alert alert-danger  w-100 d-none">
+                                Enter valid name
+                            </div>
+                        </div>
+                        <div class="input_two flex-wrap w-50 d-flex  justify-content-between gap-2 align-items-center">
+                            <input oninput="validation(phoneRegex,inputNumber)" id="inputNumber"
+                                class=" form-control w-100" type="search" placeholder="search by Phone">
+                            <div id="phoneAlert" class="alert alert-danger  w-100 d-none ">
+                                Enter valid Phone Number
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="input_orignal w-100  m-2 d-flex flex-row  justify-content-center gap-2 align-items-center">
+                        <div class="input_two flex-wrap w-50  d-flex  justify-content-between gap-2 align-items-center">
+                            <input oninput="validation(emailRegex,inputEmail)" id="inputEmail"
+                                class=" form-control w-100" type="email" placeholder="search by email">
+                            <div id="phoneAlert" class="alert alert-danger  w-100 d-none">
+                                Enter valid email
+                            </div>
+                        </div>
+                        <div class="input_two flex-wrap w-50 d-flex  justify-content-between gap-2 align-items-center">
+                            <input oninput="validation(passwordRegex,inputPassword)" id="inputPassword"
+                                class=" form-control w-100" type="password" placeholder="password">
+                            <div id="phoneAlert" class="alert alert-danger  w-100 d-none ">
+                                Enter password
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-outline-danger mt-2" disabled type="button" id="myboy"
+                    onclick="saveData()">Submit</button>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/jquery-3.7.1.min.js"></script>
+<script src="./js/index.js"></script>
+
+</html>
